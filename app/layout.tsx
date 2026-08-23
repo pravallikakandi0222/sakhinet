@@ -1,10 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { IBM_Plex_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
+const _jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
+const _plexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'] })
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Sakhi — Safety, Essentials & Support for Women',
+  description:
+    'One place for emergency SOS alerts, verified Indian women helplines, free menstrual and innerwear essentials, and confidential mental health support.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -28,8 +33,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#fdf6fa' },
+    { media: '(prefers-color-scheme: dark)', color: '#1b1119' },
   ],
 }
 
@@ -39,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className="bg-background">
+      <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -1,47 +1,49 @@
+import { EssentialsRequest } from '@/components/essentials-request'
+import { HelplineDirectory } from '@/components/helpline-directory'
+import { MindSupport } from '@/components/mind-support'
+import { SafetyConsole } from '@/components/safety-console'
+import { SiteFooter } from '@/components/site-footer'
+import { SiteHeader } from '@/components/site-header'
+
 export default function Page() {
   return (
-    <main
-      style={{
-        colorScheme: 'light dark',
-        position: 'relative',
-        display: 'flex',
-        minHeight: '100vh',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'light-dark(#fff, #000)',
-        color: 'light-dark(#000, #fff)',
-      }}
-    >
-      <svg
-        aria-hidden="true"
-        style={{ width: 80, height: 80 }}
-        width={80}
-        height={80}
-        fill="none"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-        strokeWidth="0.5"
-      >
-        <path
-          d="M14.2 14.2H17V6.9375C17 4.76288 15.2371 3 13.0625 3H5.8V5.8M14.2 14.2V7.79063L7.79062 14.2H14.2ZM14.2 14.2V17H6.9375C4.76288 17 3 15.2371 3 13.0625V5.8H5.8M5.8 5.8V12.2313L12.2313 5.8H5.8Z"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <p
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 'calc(50% + 56px)',
-          transform: 'translateX(-50%)',
-          whiteSpace: 'nowrap',
-          fontSize: '14px',
-          fontWeight: 500,
-          color: 'light-dark(#71717a, #a1a1aa)',
-        }}
-      >
-        Your v0 generation will show here.
-      </p>
-    </main>
+    <>
+      <SiteHeader />
+      <main id="top" className="flex flex-col gap-16 pb-16 sm:gap-24">
+        <section className="mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 sm:pt-20">
+          <p className="font-mono text-xs tracking-widest text-primary uppercase">
+            Safety · Essentials · Support
+          </p>
+          <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] font-extrabold tracking-tight text-balance sm:text-6xl">
+            Help that does not make you explain yourself first.
+          </h1>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
+            One hold of a button to reach your people. Verified helplines that actually pick
+            up. Period supplies and innerwear delivered free and discreetly. Counsellors who
+            treat a bad month as seriously as a broken bone.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#sos"
+              className="rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Set up my SOS
+            </a>
+            <a
+              href="#essentials"
+              className="rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
+            >
+              I need essentials
+            </a>
+          </div>
+        </section>
+
+        <SafetyConsole />
+        <HelplineDirectory />
+        <EssentialsRequest />
+        <MindSupport />
+      </main>
+      <SiteFooter />
+    </>
   )
 }
