@@ -7,7 +7,7 @@ const _jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 const _plexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'] })
 
 export const metadata: Metadata = {
-  title: 'Sakhi — Safety, Essentials & Support for Women',
+  title: 'SakhiNet — Safety, Essentials & Support for Women',
   description:
     'One place for emergency SOS alerts, verified Indian women helplines, free menstrual and innerwear essentials, and confidential mental health support.',
   generator: 'v0.app',

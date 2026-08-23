@@ -21,7 +21,9 @@ export function SiteHeader() {
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Shield className="size-4" aria-hidden="true" />
           </span>
-          <span className="text-base font-bold tracking-tight">Sakhi</span>
+          <span className="text-base font-bold tracking-tight">
+            Sakhi<span className="text-primary">Net</span>
+          </span>
         </a>
 
         <nav aria-label="Sections" className="ml-2 hidden items-center gap-1 md:flex">
