@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div className="max-w-sm">
           <p className="flex items-center gap-2 text-base font-bold">
             <Shield className="size-4 text-primary" aria-hidden="true" />
-            Sakhi<span className="text-primary">Net</span>
+            Sakhi<span className="text-saffron">Net</span>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Built with survivors, ASHA workers and volunteer counsellors. Nothing you enter

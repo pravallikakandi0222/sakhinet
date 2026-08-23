@@ -22,7 +22,7 @@ export function SiteHeader() {
             <Shield className="size-4" aria-hidden="true" />
           </span>
           <span className="text-base font-bold tracking-tight">
-            Sakhi<span className="text-primary">Net</span>
+            Sakhi<span className="text-saffron">Net</span>
           </span>
         </a>
 
